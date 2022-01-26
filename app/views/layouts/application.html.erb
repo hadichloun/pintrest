@@ -8,9 +8,14 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <%= favicon_link_tag asset_path('pint-fav-icon.png') %>
   </head>
 
   <body>
+  <%= render 'home/header' %>
+
+  <div class="container">
     <%= yield %>
+    </div>
   </body>
 </html>
