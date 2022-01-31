@@ -4,10 +4,13 @@
 
 <div id="pins">
   <% @pins.each do |pin| %>
+    <% if pin.user == current_user %>
     <%= render pin %>
     <p>
       <%= link_to "Show this pin", pin %>
+      
     </p>
+  <% end %>
   <% end %>
 </div>
 
